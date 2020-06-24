@@ -22,3 +22,15 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## groups_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreing_key: truel|
+|group_id|integer|null: false, foreing_key: truel|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+

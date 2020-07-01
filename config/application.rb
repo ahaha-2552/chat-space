@@ -16,6 +16,5 @@ module ChatSpace
       g.helper false
       g.test_framework false
     end
-    mework and any gems in your application.
   end
 end

@@ -1,0 +1,28 @@
+.chat
+  .header-chat
+    .header-list
+      .header-title
+        .p test
+      .header-member  
+        .p Member:masa
+    .header-btn
+      %a.header-btn__editbtn{ href: "#"}
+        Edit
+  .main-chat
+    .chat-list
+      .chat-name
+        .p masa
+      .chat-date
+        .p 2020/06/29(Sun) 10:43:01
+    .chat-message
+      .p おはよう！
+
+  .form
+    .tweet-form
+      %input.tweet-form__comment{:placeholder => "type a messag"}
+      %label{class: "tweet-form__image-btn"}
+        =icon('fas', 'images')
+        %input{class: "icon", type: "file"}
+    .send-btn
+      SEND
+

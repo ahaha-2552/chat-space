@@ -29,11 +29,24 @@
     .contents-icon {
       font-size: 13px;
       text-align: right;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .btn {
+        margin-right: 5px;
+      }
     }
   }
   &__list {
     color: #ffffff;
     font-size:  15px;
+    .group {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
     .group-name {
       margin: 20px 20px 5px 20px;
     }

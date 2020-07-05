@@ -2,20 +2,27 @@
   .header
     .header__list
       .header__title
-        = @group.name
+        .p test
       .header__member
-        - @group.users.each do |user|
-          ="Member:#{user.name}"
+        .p Member:masa
     .header-btn
-      =link_to 'edit', edit_group_path(@group), class:"header-btn__editbtn"
+      %a.header-btn__editbtn{ href: "#"}
+        Edit
   .messeage
-    = render @messages
+    .messeage__list
+      .messeage__name
+        .p masa
+      .messeage__date
+        .p 2020/06/29(Sun) 10:43:01
+    .messeage__chat
+      .p おはよう！
 
   .form
-    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
-      .tweet-form
-        =f.text_field :content, class: 'tweet-form__comment', placeholder: 'type a messag'
-        = f.label :image, class: 'tweet-form__image-btn' do
-          =icon('fas', 'images')
-          %input{class: "icon", type: "file"}
-      = f.submit 'Send', class: "send-btn"
+    .tweet-form
+      %input.tweet-form__comment{:placeholder => "type a messag"}
+      %label{class: "tweet-form__image-btn"}
+        =icon('fas', 'images')
+        %input{class: "icon", type: "file"}
+    .send-btn
+      SEND
+

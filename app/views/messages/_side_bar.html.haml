@@ -14,8 +14,8 @@
   .sideber__list
     - current_user.groups.each do |group|
       .group
-        = link_to group_messages_path(group) do
+        = link_to '' do
           .group-name
             = group.name
           .group-message
-            = group.show_last_message
+            メッセージがありません

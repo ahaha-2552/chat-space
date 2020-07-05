@@ -16,6 +16,6 @@
       .tweet-form
         =f.text_field :content, class: 'tweet-form__comment', placeholder: 'type a messag'
         = f.label :image, class: 'tweet-form__image-btn' do
-          =icon('fas', 'images')
-          %input{class: "icon", type: "file"}
+          = icon('fas', 'images')
+          = f.file_field :image, class: 'Hidden'
       = f.submit 'Send', class: "send-btn"

@@ -96,6 +96,10 @@
   height: calc(100vh - 100px - 90px);
   width: calc(100vw - 300px);
   padding: 35px 40px 0;
+  overflow: scroll;
+  .messagebox {
+    margin-bottom: 46px;
+  }
   &__list {
     display: flex;
     &__name {
@@ -108,10 +112,10 @@
     color: #999999;
     margin-left: 8px;
   }
-    &__chat {
-      font-size: 12px;
-      margin-top: 12px;
-    }
+  &__chat {
+    font-size: 12px;
+    margin-top: 12px;
+  }
 }
 
 .form {
@@ -120,9 +124,9 @@
   background-color: #d2d2d2;
   display: flex;
   justify-content: space-between;
-  .tweet-form{
+  .tweet-form {
     width: 100%;
-    margin: 20px 30px;
+    margin: 11px 30px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -146,7 +150,7 @@
   .send-btn {
     padding: 0 30px;
     height: 50px;
-    margin: 20px 40px 0 0;
+    margin: 11px 40px 0 0;
     font-size: 16px;
     line-height: 50px;
     background-color: #38aef0;

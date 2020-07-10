@@ -12,9 +12,9 @@
     = render @messages
 
   .form
-    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "tweet-form"}, local: true do |f|
       .tweet-form
-        =f.text_field :content, class: 'tweet-form__comment', placeholder: 'type a messag'
+        =f.text_field :content, class: 'tweet-form__comment', placeholder: 'type a message'
         = f.label :image, class: 'tweet-form__image-btn' do
           = icon('fas', 'images')
           = f.file_field :image, class: 'Hidden'

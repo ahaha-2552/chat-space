@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-      `<div class="messagebox">
+      `<div class="messagebox" data-message-id=${message.id}>
         <div class="messeage__list">
           <div class="messeage__name">
             ${message.user_name}
@@ -20,7 +20,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="messagebox">
+      `<div class="messagebox" data-message-id=${message.id}>
         <div class="messeage__list">
           <div class="messeage__name">
             ${message.user_name}
@@ -50,7 +50,7 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
+    .done(function(data) {
       let html = buildHTML(data);
       $('.messeage').append(html);
       $('.messeage').animate({ scrollTop: $('.messeage')[0].scrollHeight});
@@ -59,6 +59,7 @@ $(function(){
     })
     .fail(function(){
       alert('error');
+      $('Form__submit').prop("disabled", false);
     });
-  });
+  })
 });
